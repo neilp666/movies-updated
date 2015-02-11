@@ -31,6 +31,7 @@ GEM
     autoprefixer-rails (5.0.0.2)
       execjs
       json
+    bcrypt (3.1.9)
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
@@ -47,6 +48,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.0)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     excon (0.13.4)
     execjs (2.3.0)
@@ -84,6 +92,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-ssh (2.9.1)
     nokogiri (1.5.11)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.3)
@@ -111,6 +120,8 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     ruby-hmac (0.4.0)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -143,6 +154,8 @@ GEM
     uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -151,6 +164,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.3)
   carrierwave
   coffee-rails (~> 4.0.0)
+  devise
   figaro
   fog
   jbuilder (~> 2.0)
