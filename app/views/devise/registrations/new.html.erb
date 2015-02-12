@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
 
@@ -21,7 +21,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class "form-control" %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.submit "Sign up", class: "btn btn-primary" %>
   </div>
 <% end %>
