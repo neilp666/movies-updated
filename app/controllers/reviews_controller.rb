@@ -5,9 +5,7 @@ class ReviewsController < ApplicationController
 
   respond_to :html
 
-  
 
-  
 
   def new
     @review = Review.new
@@ -20,10 +18,10 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
-    @review.movie_id = @movie_id
+    @review.movie_id = @movie.id
 
     @review.save
-    respond_with(@root_path)
+    respond_with(@movie)
   end
 
   def update
@@ -42,7 +40,8 @@ class ReviewsController < ApplicationController
     end
 
     def set_movie
-      @movie = Movie.find(params[:restaurant_id])
+      @movie = Movie.find(params[:movie_id])
+    end
 
     def review_params
       params.require(:review).permit(:movie_rating, :comment)
