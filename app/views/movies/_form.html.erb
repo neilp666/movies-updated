@@ -15,25 +15,25 @@
 
   <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Movie Title" %>
   </div>
   <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control" %>
+    <%= f.text_area :description, class: "form-control", placeholder: "Movie description" %>
   </div>
   <div class="form-group">
     <%= f.label :movie_length %><br>
-    <%= f.text_field :movie_length, class: "form-control" %>
+    <%= f.text_field :movie_length, class: "form-control", placeholder: "Movie length in mins" %>
   </div>
   <div class="form-group">
     <%= f.label :director %><br>
-    <%= f.text_field :director, class: "form-control" %>
+    <%= f.text_field :director, class: "form-control", placeholder: "Director" %>
   </div>
   <div class="form-group">
     <%= f.label :rating %><br>
-    <%= f.text_field :rating, class: "form-control" %>
+    <%= f.text_field :rating, class: "form-control", placeholder: "movie rating e.g pg,18,12" %>
   </div>
-  <div class="fotrm-group">
+  <div class="form-group">
     <%= f.label :image %><br>
     <%= f.file_field :image, class: "form-control" %>
   </div>

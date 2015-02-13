@@ -50,13 +50,20 @@
       <tr>
         <td>
           <h4>
-              <%= "#{review.user.first_name.capitalize} #{review.user.last_name.capitalize}" %>
+              
           </h4>
           <p><%= review.created_at.strftime("%-m/%-d/%-y") %></p>
         </td>
       <td>
           <div class="star-rating" data-score= <%= review.movie_rating %> ></div>
           <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
+
+          <% if user_signed_in? %>
+            <% if (review.user == current_user) || (current_user.admin?) %>
+              <%= link_to "Edit", edit_movie_review_path(@movie, review) %>
+              <%= link_to "Delete", movie_review_path(@movie, review), method: :delete %>
+            <% end %>
+          <% end %>
         </td>
       </tr>
       <% end %>
