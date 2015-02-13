@@ -11,10 +11,8 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :movie_rating %>
-    <%= f.number_field :movie_rating, class: "form-control" %>
-  </div>
+  <div id="star-rating"></div>
+
   <div class="form-group">
     <%= f.label :comment %>
     <%= f.text_area :comment, class: "form-control" %>
@@ -23,3 +21,11 @@
     <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
+
+<script>
+  $('#star-rating').raty({
+    path: 'https://s3-eu-west-1.amazonaws.com/moviesdemo/stars',
+    scoreName: 'review[movie_rating]'
+  });
+</script>

@@ -10,7 +10,12 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
-    @reviews = Review.where(movie_id: @movie.id)
+    @reviews = Review.where(movie_id: @movie.id).order("created_at DESC")
+    if @reviews.blank?
+      @avg_movie_rating = 0
+    else
+      @avg_movie_rating = @reviews.average(:movie_rating).round(2)
+    end
   end
 
   # GET /movies/new

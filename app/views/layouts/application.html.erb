@@ -2,15 +2,18 @@
 <html>
 <head>
   <title>Moviedemo</title>
+   <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<%= render 'layouts/navbar' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+ 
 </head>
 <body>
 
-<%= render 'layouts/navbar' %>
+
 <div class="container-fluid" %>
 <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
