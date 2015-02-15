@@ -19,5 +19,6 @@ gem 'fog'
 gem 'figaro'
 gem 'mini_magick'
 gem 'devise'
+gem 'searchkick'
 
 
